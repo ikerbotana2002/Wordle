@@ -1,6 +1,7 @@
 # Wordle
 Este proyecto es una versión simplificada del juego Wordle implementada en lenguaje ensamblador para el microprocesador MC6809. El programa permite al usuario jugar adivinando una palabra de cinco letras en un entorno de terminal, con un sistema de colores para dar pistas, similar al juego original.
 
+
 📁 Estructura del proyecto
 El código está dividido en múltiples archivos .asm para mejorar su organización y legibilidad. El ensamblaje, enlace y ejecución del programa se realiza mediante el script c.sh.
 
@@ -49,6 +50,7 @@ borra_pantalla: limpia el terminal.
 
 Funciones para aplicar color a las letras según su estado.
 
+
 🧠 Lógica del juego
 Se registran hasta 6 intentos para adivinar la palabra.
 
@@ -57,6 +59,7 @@ Cada intento se guarda en una lista de palabras (array) y su estado de colores s
 Al adivinar correctamente (todo en verde) se gana.
 
 Si se fallan los 6 intentos, el usuario puede volver a jugar o regresar al menú principal.
+
 
 ✅ Requisitos
 Entorno compatible con simulación o emulación del MC6809.
