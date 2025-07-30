@@ -1,0 +1,49 @@
+XH2
+H 2 areas D global symbols 2 banks 1 modes
+M mostrar_dic
+G 00 00 80 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F
+B _CSEG base 0 size 0 map 0 flags 0
+B _DSEG base 0 size 0 map 0 flags 4 fsfx _DS
+S borra_pantalla Ref0000
+S cadena_tecla Ref0000
+S palabras Ref0000
+S print_number Ref0000
+S .__.ABS. Def0000
+S cadena_dic Ref0000
+S print Ref0000
+S cadena_num_palabras Ref0000
+A _CODE size 40 flags CD80 bank 0
+S _mostrar_dic_loop Def0012
+S _mostrar_dic_fin Def002A
+S mostrar_dic Def0001
+S num_words Def0000
+S _mostrar_dic_espacios Def001E
+A _DATA size 0 flags CCC0 bank 1
+T 00 00
+R 00 00 00 00
+T 00 00 00
+R 00 00 00 00
+T 00 01
+R 00 00 00 00
+T 00 01 BD 00 00 7F 00 00 8E
+R 00 00 00 00 81 03 00 00 01 06 00 00
+T 00 08 00 00 BD 00 00 8E
+R 00 00 00 00 81 02 00 05 81 05 00 06
+T 00 0E 00 00 C6 06
+R 00 00 00 00 81 02 00 02
+T 00 12
+R 00 00 00 00
+T 00 12 5A 27 09 A6 80 27 11 B7 FF 00 20 F4
+R 00 00 00 00
+T 00 1E
+R 00 00 00 00
+T 00 1E 7C 00 00 86 0A B7 FF 00 C6 06 20 E8
+R 00 00 00 00 01 03 00 00
+T 00 2A
+R 00 00 00 00
+T 00 2A 8E 00 00 BD 00 00 B6
+R 00 00 00 00 81 03 00 07 81 06 00 06
+T 00 31 00 00 BD 00 00 8E
+R 00 00 00 00 01 02 00 00 81 05 00 03
+T 00 37 00 00 BD 00 00 B6 FF 02 39
+R 00 00 00 00 81 02 00 01 81 05 00 06

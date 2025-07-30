@@ -1,0 +1,63 @@
+XH2
+H 3 areas 14 global symbols 2 banks 1 modes
+M wordle
+G 00 00 80 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F
+B _CSEG base 0 size 0 map 0 flags 0
+B _DSEG base 0 size 0 map 0 flags 4 fsfx _DS
+S screen DefFF00
+S borra_pantalla Ref0000
+S cadena_invalida Ref0000
+S cadena_juego Ref0000
+S cadena_salir Ref0000
+S menu_principal Ref0000
+S mostrar_dic Ref0000
+S juego Ref0000
+S cadena_salto Ref0000
+S .__.ABS. Def0000
+S cadena_empieza_juego Ref0000
+S teclad DefFF02
+S print Ref0000
+S fin DefFF01
+A _CODE size 3A flags CD80 bank 0
+S _ha_metido_1 Def0024
+S programa Def0000
+S _ha_metido_2 Def0029
+S _ha_metido_3 Def002E
+S cont Def0009
+S _salir Def0036
+A _DATA size 0 flags CCC0 bank 1
+A FIJA size 0 flags D0C
+T 00 00
+R 00 00 00 00
+T 00 00 BD 00 00 8E 00 00 BD
+R 00 00 00 00 81 03 00 01 81 06 00 05
+T 00 07 00 00
+R 00 00 00 00 81 02 00 0C
+T 00 09
+R 00 00 00 00
+T 00 09 B6 FF 02 81 31 27 14 81 32 27 15 81 53
+R 00 00 00 00
+T 00 16 27 16 81 73 27 12 8E 00 00 BD 00 00 20
+R 00 00 00 00 81 09 00 02 81 0C 00 0C
+T 00 23 DC
+R 00 00 00 00
+T 00 24
+R 00 00 00 00
+T 00 24 BD 00 00 20 D7
+R 00 00 00 00 81 03 00 06
+T 00 29
+R 00 00 00 00
+T 00 29 BD 00 00 20 D2
+R 00 00 00 00 81 03 00 07
+T 00 2E
+R 00 00 00 00
+T 00 2E 8E 00 00 BD 00 00 20 00
+R 00 00 00 00 81 03 00 04 81 06 00 0C
+T 00 36
+R 00 00 00 00
+T 00 36 4F B7 FF 01
+R 00 00 00 00
+T FF FE
+R 00 00 00 02
+T FF FE 00 00
+R 00 00 00 02 01 02 00 00
